@@ -1,0 +1,337 @@
+% cv-us.tex
+% $Id: cv-us.tex,v 1.28 2006/12/12 22:53:52 jrblevin Exp $
+%
+% LaTeX Curriculum Vitae Template
+%
+% Copyright (C) 2004-2006 Jason Blevins
+% Copyright (C) 2007 Leonardfo Franchi
+%
+% You may use use this document as a template to create your own CV
+% and you may redistribute the source code freely. No attribution is
+% required in any resulting documents, however, I do ask that you
+% please leave this notice and the above URL in the source code if you
+% choose to redistribute this file.
+%
+% Jason R. Blevins <jrblevin@sdf.lonestar.org>
+% http://jrblevin.freeshell.org
+% Durham, December 12, 2006
+%
+%%---------------------------------------------------------------------------%
+%
+% Notes:
+%
+% * Don't forget to change `pdfauthor' and `keywords' in the \hypersetup
+%   section below.
+%
+% * To create a new page use: \newpage \opening
+%
+% * res.cls includes an \address{} command which can be used up to twice,
+%   but my address is too long for the format it uses.
+%
+% * Alternate documentclass statement to put headings in margin:
+%   \documentclass[margin,line,11pt,final]{res}
+%
+% * Can divide publication/presentation list into subsections by year:
+%   \section{\bf\small\hspace{8mm}2006}
+%
+%%----------------------------------------------------------------------------%
+
+\documentclass[overlapped,line,letterpaper]{res}
+
+\usepackage{ifpdf}
+
+
+
+\ifpdf
+  \usepackage[pdftex]{hyperref}
+\else
+  \usepackage[hypertex]{hyperref}
+\fi
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+\hypersetup{
+  letterpaper,
+  colorlinks,
+  urlcolor=black,
+  pdfpagemode=none,
+  pdftitle={Curriculum Vitae},
+  pdfauthor={Leonardo Franchi},
+  pdfsubject={Curriculum Vitae},
+  pdfkeywords={computer science artificial intelligence robotics kde open source amarok}
+}
+
+%margins
+\usepackage[top=2cm,left=1.2cm,right=3.1cm,bottom=1.5cm]{geometry}
+
+%%===========================================================================%%
+
+\begin{document}
+
+% no page number
+\thispagestyle{empty}
+% smaller right margin
+\resumewidth=3.0in
+\sectionskip 1.0em
+
+%my fonts
+
+
+%---------------------------------------------------------------------------
+% Document Specific Customizations
+
+% Make lists without bullets and with no indentation
+\setlength{\leftmargini}{0.0em}
+\renewcommand{\labelitemi}{}
+
+% Use large bold font for printed name at top of pages
+\renewcommand{\namefont}{\large\textbf}
+
+%---------------------------------------------------------------------------
+
+\name{Leonardo Franchi}
+
+\begin{resume}
+
+
+\begin{ncolumn}{4}
+  113 Prospect St, Apt 1 &  & (512) 775 5637 \\
+  Somerville, MA 02143  &   &  https://github.com/lfranchi & {lfranchi@kde.org}
+\end{ncolumn}
+
+%---------------------------------------------------------------------------
+
+\section{\bf Education}
+
+% \begin{format}
+% \line{l}
+% 
+% \end{format}
+
+Tufts University, Medford, MA.\newline
+B.A. in Computer Science and Philosophy, cum laude.  2010\newline
+
+%---------------------------------------------------------------------------
+
+
+\section{\bf Work Experience}
+
+\begin{format}
+\employer{l}\location{r}\\
+\title{l}\dates{r}\\
+\body\\
+\end{format}
+
+\employer{\textbf{Humbug, Inc}}
+\location{Cambridge, MA}
+\dates{Jan 2013--Present}
+\title{Software Engineer}
+\begin{position}
+\textbullet \space Engineer at early-stage startup, involved in all aspects of development. \\
+\textbullet \space Developed, designed and architected backend Python services and frontend Javascript.
+\end{position}
+
+\employer{\textbf{Hacker School}}
+\location{Brooklyn, NY}
+\dates{Oct 2012--Dec 2012}
+\title{Hacker}
+\begin{position}
+\textbullet \space Built a networked daemon in Clojure that replicates a SQL database amongst peers.\\
+\textbullet \space Implemented a Software Transactional Memory system in Python for Clojure-Py.\\
+\textbullet \space Contributed to a distributed fault-tolerant Go project for running arbitrary services in a reliable manner. \\
+\textbullet \space Contributed to Droplet, a Clojure DSL implementing the Bloom$^L$ language. \\
+\textbullet \space Developed commutative replicated data types (CRDTs) as well as examples for the droplet project.
+\end{position}
+
+\employer{\textbf{Tomahawk Player}}
+\location{Cambridge, MA}
+\dates{June 2010--Present}
+\title{Software Developer}
+\begin{position}
+\textbullet \space Developer of cross-platform open-source social media player Tomahawk. \\
+\textbullet \space Wrote C++, Objective-C, Javascript to provide a seamless music experience that encompasses the web.
+\end{position}
+
+\employer{\textbf{KDAB (USA) LLC.}}
+\location{Cambridge, MA}
+\title{Software Engineer}
+\dates{Sept 2009---December 2012}
+\begin{position}
+\textbullet \space Cross-platform C++ development with the Qt framework.\\
+\textbullet \space Developed touch-screen and low-resolution UIs for touch screen and embedded devices.\\
+\textbullet \space Bugfixing and feature development for large and small  Windows, OS X, and Linux applications. \end{position}
+
+\employer{\textbf{Mitsubishi Electric Research Laboratories}}
+\location{Cambridge, MA}
+\title{Intern, Speech Group}
+\dates{May-August, 2008 \& 2009}
+\begin{position}
+\textbullet \space Developed Java and C applications for the Android platform. \\
+\textbullet \space Ported speech recognition engine in C to Android with JNI. \\
+\textbullet \space Ported existing Windows-specific code to Linux and ARM/Embedded systems. \\
+\textbullet \space Investigated information retrieval systems and their applications to broad cross-domain speech recognition. \\
+\textbullet \space Generated comparisons of speech recognition backends over word- and particle-based speech synthesis.
+\end{position}
+
+\employer{\textbf{Amarok}}
+\location{Medford, MA}
+\dates{June 2005--July 2010}
+\title{Software Developer}
+\begin{position}
+\textbullet \space Developer of leading open-source audio player Amarok for the GNU/Linux and Mac OS X operating systems. \\
+\textbullet \space Developed dynamic graphical user interfaces, scripting interfaces, web service integration, and other features and bugfixes.
+\end{position}
+
+\employer{\textbf{Google Summer of Code}}
+\location{Medford, MA}
+\dates{May 2007--August 2009}
+\title{Student, Mentor, Administrator}
+\begin{position}
+\textbullet \space Managed and organized KDE Project's 50 GSoC students and mentors.\\
+\textbullet \space Managed and tracked progress of mentee in the GSoC program. Assisted and guided student's development.\\
+\textbullet \space Designed innovative ways of using SVG-themed applets to visually represent data. \\
+\textbullet \space Extended and adapted a flexible client/server model in order to provide a reliable and reusable system for managing visually appealing applets.
+\end{position}
+
+\employer{\textbf{Information Technology, Tufts University}}
+\location{Medford, MA}
+\title{Student RCC}
+\dates{August 2007--May 2008}
+\begin{position}
+\textbullet \space Dealt with user support as well as troubleshooting, repairing, and restoring of users' systems as a member of the front-line support staff for Tufts University Information Technology.
+\end{position}
+
+\begin{format}
+\employer{l}\location{r}\\
+\title{l}\dates{r}\\
+\body\\
+\end{format}
+
+\section{\bf Talks}
+
+\begin{format}
+\employer{l}\location{r}\\
+\title{l}\dates{r}\\
+\body\\
+\end{format}
+
+\employer{\textbf{Akademy 2010}}
+\location{Tampere, Finland}
+\dates{July, 2010}
+\title{Blurring the Boundaries of Music}
+\begin{position}
+\textbullet \space Announcing Tomahawk, a media player designed for our social music day and age. 
+\end{position}
+
+\employer{\textbf{Camp KDE 2010}}
+\location{San Diego, California}
+\dates{January, 2010}
+\title{Making Your Media Player Intelligent}
+\begin{position}\textbullet \space Media players have failed to evolve and keep up with new innovation in the music sphere.
+\end{position}
+
+\employer{\textbf{Camp KDE 2009}}
+\location{Negril, Jamaica}
+\dates{January, 2009}
+\title{Integrating libplasma in Desktop Applications}
+\begin{position}\textbullet \space An account of my experience integrating libplasma in the Amarok media player. \\
+\textbullet \space Pitfalls of using the plasma framework for displaying dynamic content in your standalone application.
+\end{position}
+
+% \section{\bf Research Experience}
+
+\begin{format}
+\employer{l}\location{r}\\
+\title{l}\dates{r}\\
+\body\\
+\end{format}
+
+%------------------------------------------------------------------------------
+
+%\section{\bf Honors and Awards}
+%\begin{itemize}
+%% \item College Board National AP Scholar, 2006
+%\item FIRST 2006 Las Vegas Regional Champion, FIRST Robotics Competition
+%% \item Rachel H. Austin Award, Social Sciences, Palo Alto High School, 2006
+%% \item Excellence in Computer Science Award, Mathematics Department, Palo Alto High School, 2004
+%\end{itemize}
+
+
+\section{\bf Computer Skills}
+\begin{itemize}
+\item Proficiency in software development in C++, Python, Clojure, Javascript, Go, Java
+\item Familiarity with Qt, Concurrency, Regular Expressions, Threads, Sockets, SQL, \LaTeX
+\item Expert user and administrator of GNU/Linux and Mac OS X
+\end{itemize}
+
+
+%\section{\bf Working Papers}
+%
+%``The Effects of Ties on Convergence in K-Modes Variants for Clustering
+%Categorical Data,''
+%with N.\ Orlowski, D.\ Schlorff, D.\ Ca\~{n}as, M.\ T.\ Chu,
+%and R.\ E.\ Funderlic (2004).%
+
+%``Updating the Centroid Decomposition with Applications in LSI,''
+%with M.\ T.\ Chu, D.\ Ca\~{n}as, R.\ E.\ Funderlic, N.\ Orlowski,
+%and D.\ Schlorff (2004).
+
+%``Structural Estimation of Sequential Games of Complete Information'' (2006).
+
+%------------------------------------------------------------------------------
+
+%%===========================================================================%%
+% \newpage
+% \opening
+% 
+% \section{\bf Scientific Software}
+% 
+% Blevins, J., J. Heath, and W. Hereman (2002):
+% \href{http://www.mines.edu/fs_home/whereman/software/PDESolutionTester/}
+% {\texttt{PDESolutionTester}},
+% A Mathematica program for the symbolic verification of exact solutions of
+% nonlinear partial differential equations.
+% 
+% %------------------------------------------------------------------------------
+% 
+% %\section{\bf Presentations}
+% %
+% %``Solving Nonlinear Wave Equations with Mathematica,''
+% %North Carolina State University, April 23, 2003.
+% 
+% %---------------------------------------------------------------------------
+% 
+% \section{\bf Service}
+% 
+% \begin{itemize}
+% \item Vice President, Society of Undergraduate Mathematics, North
+%   Carolina State University, 2001--2003
+% \item Vice President, Economics Graduate Student Council, Duke
+%   University, 2006--2007
+% \end{itemize}
+% 
+% %%---------------------------------------------------------------------------%%
+% 
+% \section{\bf Honors and Awards}
+% \begin{itemize}
+% \item \href{http://www.pbk.org/}{Phi Beta Kappa}, 2003
+% \item Undergraduate Research Award, North Carolina State University, 2004
+% \item Outstanding Teaching Assistant Award, Duke University, 2006
+% \end{itemize}
+% 
+% %%---------------------------------------------------------------------------%%
+% 
+% \begin{center}
+% \vspace{\fill}\ \newline
+% {\tiny \rm $ $RCSfile: cv-us.tex,v $ $ }
+% {\tiny \rm $ $Date: 2006/12/12 22:53:52 $ $ }
+% {\tiny \rm $ $Revision: 1.28 $ $ }
+% \end{center}
+
+\end{resume}
+
+\end{document}
+
+%%===========================================================================%%
